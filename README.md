@@ -1,4 +1,4 @@
-Studio 98 Frontend Developer Application
+Studio98 Frontend Developer Application
 ========================================
 
 ## Instructions ##
