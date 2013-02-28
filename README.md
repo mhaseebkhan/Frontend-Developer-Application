@@ -1,14 +1,7 @@
-Studio98 Frontend Developer Application
-========================================
+Below are some quick highlights of the code:
 
-## Instructions ##
-
-1. Clone this repo.
-2. Develop a simple asynchronous application using Backbone.js that will allow users to see, edit, add and delete items with the provided Product model (name, type and price).  Rails 3 has been provided as a RESTful JSON API.  You are not required to setup a Rails environment and host this project, but you will be expected to know where files should be placed in a Rails context.  The expected time to complete this project is between 2 and 3 days.
-3. Zip/tar the project folder and e-mail to jordan@studio98.com.
-
-Bonus points for simple, clean and clear code that focuses heavily on performance and is free from errors and memory leaks
-
-More bonus points for using Twitter Bootstrap and / or implementing table pagination and search functionality
-
-Super bonus points for implementing a simple user authentication system with Devise
+* Fixed an error in the migration. Renamed the type field to product_type as type is used for managing polymorphic association. Updated the model accordingly.
+* In products controller, respond_width was being used instead of respond_with, which was a syntax error. Resolved that.
+* Used SQLite3 instead of MySQL temporarily so one can execute the code rightaway and don't need to update the database settings.
+* Added some seed products as well. For a clean database setup, do a bundle install and run rake db:reset.
+* Integrated twitter bootstrap and devise in the project as well.

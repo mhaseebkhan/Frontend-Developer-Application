@@ -14,12 +14,12 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    @product = Product.new(params[:frontend])
+    @product = Product.new(params[:product])
 
     if @product.save
       respond_with(@product, status: :created)
     else
-      respond_with(@product.errors, status: :unprocessable_entity)
+      respond_with(@product, status: :unprocessable_entity)
     end
   end
 
@@ -27,10 +27,10 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if @product.update_attributes(params[:frontend])
-      respond_width(nothing: true, status: :ok)
+    if @product.update_attributes(name: params[:product][:name], price: params[:product][:price], product_type: params[:product][:product_type])
+      respond_with(nothing: true, status: :ok)
     else
-      respond_width(@product.errors, status: :unprocessable_entity)
+      respond_with(@product, status: :unprocessable_entity)
     end
   end
 
@@ -39,9 +39,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.destroy
-      respond_width(nothing: true, status: :ok)
+      respond_with(nothing: true, status: :ok)
     else
       respond_with(nothing: true, status: :forbidden)
     end
   end
+
 end

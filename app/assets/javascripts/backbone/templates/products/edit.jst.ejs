@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="product-container">
+    <h1 class="control-group">Edit Product</h1>
+    <form id="edit-product" name="product">
+        <div class="field control-group">
+          <label class="control-label" for="title">Name:</label>
+          <div class="controls">
+            <input type="text" name="name" id="name" value="<%= name %>" />
+          </div>
+        </div>
+        <div class="field control-group">
+          <label class="control-label" for="title">Price:</label>
+          <div class="controls">
+            <input type="text" name="price" id="price" value="<%= price %>" />
+          </div>
+        </div>
+        <div class="field control-group">
+          <label class="control-label" for="title">Product Type:</label>
+          <div class="controls">
+            <input type="text" name="product_type" id="product_type" value="<%= product_type %>" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary" value="Update Product">Update Product</button>
+          </div>
+        </div>
+    </form>
+  </div>
+  <a href="#/index">Back</a>
+</div>
