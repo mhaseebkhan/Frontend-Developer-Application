@@ -4,6 +4,5 @@
 
 log
 tmp
-vendor
 
-
+db/*.sqlite3

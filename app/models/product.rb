@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
   validates_presence_of :price
   validates_presence_of :product_type
 
+  validates :price, :numericality => true
+
 end
