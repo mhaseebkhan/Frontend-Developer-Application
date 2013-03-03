@@ -9,7 +9,7 @@ class FrontendDeveloperTest.Routers.ProductsRouter extends Backbone.Router
     "index"    : "index"
     ":id/edit" : "edit"
     ":id"      : "show"
-    ".*"        : "index"
+    ".*"       : "index"
 
   newProduct: ->
     @view = new FrontendDeveloperTest.Views.Products.NewView(collection: @products)
